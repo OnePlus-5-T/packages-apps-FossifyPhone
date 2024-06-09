@@ -1,0 +1,19 @@
+android_app_import {
+	name: "FossifyPhone",
+	apk: "FossifyPhone.apk",
+	presigned: true,
+	dex_preopt: {
+		enabled: true,
+	},
+	preprocessed: true,
+	overrides: ["Dialer"],
+	required: ["fossifyphone-permissions.xml"],
+	vendor: true,
+}
+
+prebuilt_etc {
+	name: "fossifyphone-permissions.xml",
+	src: "fossifyphone-permissions.xml",
+	sub_dir: "default-permissions",
+	vendor: true,
+}
